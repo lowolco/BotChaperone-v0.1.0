@@ -284,3 +284,10 @@ The first implementation should use signed action records, clear allow or deny d
 ## AI-specific gateway reference
 
 The `gateway/` directory contains a small reference module for a trusted enforcement point. It checks registered agent identity, declared AI origin, capability, destination, four proof fields, exact-action envelope bindings, and fresh challenges for high-risk actions. It is a prototype, not a complete traffic discovery system. Real deployments still need cryptographic verification, revocation, network routing, and durable protected audit storage.
+
+
+## Governance and competition safeguards
+
+BotChaperone must not become a hidden tool for blocking legitimate research, favoring one AI provider, or limiting competition. Security decisions should be tied to a stated risk, use vendor-neutral policy rules, return a machine-readable reason, and remain open to independent review. A gateway must enforce declared security requirements, not private business restrictions disguised as security controls.
+
+Organizations should publish the policy version, decision reason, appeal path, and relevant audit evidence for blocked high-impact actions, subject to privacy and security limits. Trust infrastructure should be replaceable, interoperable, and unable to silently deny access because an agent uses a competing model or provider.
