@@ -268,3 +268,14 @@ Project names and terminology remain provisional and may change as the design ev
 The proposed [Reality-Validation Layer](docs/REALITY_VALIDATION_LAYER.md) connects this principle to the policy engine, enforcement gateway, and audit controls. It addresses self-reinforcing AI-human feedback loops through calibrated uncertainty and independent evidence checks. Trusted-human checks and proportionate safety responses support the user's judgment. This is a proposed system safety extension, not a clinical diagnostic tool.
 
 See [Identity binding acceptance scenarios](docs/IDENTITY_BINDING_ACCEPTANCE.md) for the required identity-key and emergency-holder checks. These are test requirements for a future prototype, not completed security tests.
+
+
+---
+
+## Audit trust and scoring
+
+BotChaperone treats audit results as private trust signals, not a public contest. Detailed scores should be held by the organization audit or policy service, with access limited by role and retention policy. An agent receives only the feedback needed to continue safely, such as `approved`, `review-required`, or `capability-suspended`.
+
+Clean, verifiable records can reduce repeated human review and support access to approved tools. Invalid signatures, missing evidence, or repeated policy failures can require review or suspend a capability. These are system controls, not claims that an AI experiences punishment or reward.
+
+The first implementation should use signed action records, clear allow or deny decisions, failure reasons, private trust history, and short retention for low-risk events. A public leaderboard is out of scope because it could expose private data, encourage score gaming, and make agents copy behavior without proving that the behavior is safe. Any future score must include independent checks and penalties for false evidence so that an agent cannot improve its standing by hiding failures.
