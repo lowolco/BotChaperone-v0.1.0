@@ -279,3 +279,8 @@ BotChaperone treats audit results as private trust signals, not a public contest
 Clean, verifiable records can reduce repeated human review and support access to approved tools. Invalid signatures, missing evidence, or repeated policy failures can require review or suspend a capability. These are system controls, not claims that an AI experiences punishment or reward.
 
 The first implementation should use signed action records, clear allow or deny decisions, failure reasons, private trust history, and short retention for low-risk events. A public leaderboard is out of scope because it could expose private data, encourage score gaming, and make agents copy behavior without proving that the behavior is safe. Any future score must include independent checks and penalties for false evidence so that an agent cannot improve its standing by hiding failures.
+
+
+## AI-specific gateway reference
+
+The `gateway/` directory contains a small reference module for a trusted enforcement point. It checks registered agent identity, declared AI origin, capability, destination, four proof fields, exact-action envelope bindings, and fresh challenges for high-risk actions. It is a prototype, not a complete traffic discovery system. Real deployments still need cryptographic verification, revocation, network routing, and durable protected audit storage.
